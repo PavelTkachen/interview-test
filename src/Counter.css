@@ -1,0 +1,28 @@
+.count{
+    border: 1px solid black;
+    width: 10%;
+    height: 40%;
+    display: inline-block;
+    
+}
+.text{
+    width: 40%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+}
+.click{
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 20px;
+    cursor: pointer;
+    -moz-user-select: none;
+}
+.click:hover{background-color: grey;}
