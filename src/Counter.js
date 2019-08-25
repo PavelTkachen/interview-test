@@ -25,7 +25,11 @@ class Counter extends Component{
         this.setState(prevState=>{
             return {
                 counterOne: prevState.counterOne+1,
-                counterTwo: prevState.counterOne+2,
+                counterTwo: this.setState(oneState=>{
+                    return{
+                        counterTwo: oneState.counterOne+1,
+                    }                    
+                }),
             }
         })
     }
