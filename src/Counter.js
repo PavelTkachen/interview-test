@@ -2,37 +2,40 @@ import React, { Component } from 'react';
 import './Counter.css';
 
 class Counter extends Component{
-    
     constructor (){
         super();
         this.state = {
            counterOne: 7,
            counterTwo: 7,
-        }
+        };
         this.handleClickBlockOne= this.handleClickBlockOne.bind(this);
         this.handleClickBlockTwo= this.handleClickBlockTwo.bind(this);
-    }
+    };
     
     handleClickBlockOne(){
         this.setState(prevState=>{
             return{
                 counterOne: prevState.counterOne+1,
                 counterTwo: prevState.counterTwo+1,
-            }
+            };
         });
-    }
+    };
+
+
     handleClickBlockTwo(){
         this.setState(prevState=>{
             return {
                 counterOne: prevState.counterOne+1,
-                counterTwo: this.setState(oneState=>{
-                    return{
-                        counterTwo: oneState.counterOne+1,
-                    }                    
-                }),
-            }
-        })
-    }
+            };
+        });
+        this.setState(otherState=>{
+            return {
+                counterTwo: otherState.counterOne+1,  
+            };
+        });
+    };
+
+
     render(){
         return(
             <div>
@@ -46,7 +49,7 @@ class Counter extends Component{
                 </div>
             </div>    
         );
-    }
-}
+    };
+};
 
 export default Counter;
